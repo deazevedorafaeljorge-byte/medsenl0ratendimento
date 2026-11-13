@@ -1,1005 +1,235 @@
-html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Central de Atendimento</title>
-<meta name="description" content="Central de atendimento e suporte. Encontre informações, solicite atendimento e fale com nossa equipe.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Souza &amp; Souza Advocacia — Atendimento pelo WhatsApp</title>
+<meta name="description" content="2ª via de boleto, agendamentos, exame e análise, dúvidas. Fale pelo WhatsApp.">
+<meta property="og:title" content="Souza &amp; Souza Advocacia — Atendimento pelo WhatsApp">
+<meta property="og:description" content="Estamos aqui para ajudar você. Fale pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Inter',Arial,sans-serif;
-    background:#f5f7fa;
-    color:#172033;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-header{
-    background:#ffffff;
-    border-bottom:1px solid #e8ebef;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.navbar{
-    max-width:1180px;
-    margin:auto;
-    min-height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 24px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:11px;
-    font-size:20px;
-    font-weight:800;
-    color:#16233b;
-}
-
-.logo-icon{
-    width:40px;
-    height:40px;
-    border-radius:11px;
-    background:#146ef5;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    font-size:20px;
-}
-
-.nav-links{
-    display:flex;
-    gap:30px;
-    align-items:center;
-}
-
-.nav-links a{
-    font-size:14px;
-    font-weight:600;
-    color:#526071;
-    transition:.2s;
-}
-
-.nav-links a:hover{
-    color:#146ef5;
-}
-
-.nav-button{
-    background:#146ef5;
-    color:#fff !important;
-    padding:11px 19px;
-    border-radius:8px;
-}
-
-.hero{
-    background:
-    radial-gradient(circle at 85% 20%,rgba(20,110,245,.13),transparent 30%),
-    linear-gradient(135deg,#f8fbff 0%,#eef5ff 100%);
-    padding:85px 24px 90px;
-}
-
-.hero-container{
-    max-width:1180px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:70px;
-    align-items:center;
-}
-
-.badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:#e8f1ff;
-    color:#146ef5;
-    padding:8px 13px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.badge span{
-    width:7px;
-    height:7px;
-    background:#18a957;
-    border-radius:50%;
-}
-
-.hero h1{
-    font-size:48px;
-    line-height:1.12;
-    letter-spacing:-1.5px;
-    max-width:650px;
-    margin-bottom:20px;
-}
-
-.hero h1 strong{
-    color:#146ef5;
-}
-
-.hero p{
-    font-size:17px;
-    color:#5d6878;
-    max-width:600px;
-    margin-bottom:32px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.btn-primary,
-.btn-secondary{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 22px;
-    border-radius:9px;
-    font-size:14px;
-    font-weight:700;
-    transition:.2s;
-}
-
-.btn-primary{
-    background:#146ef5;
-    color:#fff;
-    box-shadow:0 8px 20px rgba(20,110,245,.20);
-}
-
-.btn-primary:hover{
-    transform:translateY(-2px);
-    background:#095fdc;
-}
-
-.btn-secondary{
-    background:#fff;
-    border:1px solid #dce3ec;
-    color:#27364a;
-}
-
-.btn-secondary:hover{
-    border-color:#146ef5;
-    color:#146ef5;
-}
-
-.hero-card{
-    background:#fff;
-    border:1px solid #e5eaf0;
-    border-radius:18px;
-    padding:28px;
-    box-shadow:0 20px 50px rgba(30,55,90,.10);
-}
-
-.status{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:#1a9a51;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:22px;
-}
-
-.status-dot{
-    width:10px;
-    height:10px;
-    background:#19ae5b;
-    border-radius:50%;
-}
-
-.hero-card h3{
-    font-size:21px;
-    margin-bottom:8px;
-}
-
-.hero-card > p{
-    font-size:14px;
-    margin-bottom:22px;
-}
-
-.card-option{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    padding:16px;
-    background:#f7f9fc;
-    border-radius:10px;
-    margin-top:10px;
-}
-
-.card-icon{
-    width:42px;
-    height:42px;
-    background:#e7f0ff;
-    color:#146ef5;
-    border-radius:9px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:19px;
-}
-
-.card-option strong{
-    display:block;
-    font-size:14px;
-}
-
-.card-option span{
-    display:block;
-    color:#7a8594;
-    font-size:12px;
-    margin-top:2px;
-}
-
-section{
-    padding:80px 24px;
-}
-
-.container{
-    max-width:1180px;
-    margin:auto;
-}
-
-.section-header{
-    text-align:center;
-    max-width:680px;
-    margin:0 auto 45px;
-}
-
-.section-header span{
-    color:#146ef5;
-    font-size:13px;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
-.section-header h2{
-    font-size:34px;
-    margin:8px 0 12px;
-    letter-spacing:-.7px;
-}
-
-.section-header p{
-    color:#687486;
-    font-size:15px;
-}
-
-.services{
-    background:#fff;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.service-card{
-    border:1px solid #e7ebf0;
-    border-radius:14px;
-    padding:28px;
-    background:#fff;
-    transition:.25s;
-}
-
-.service-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 15px 35px rgba(20,40,70,.08);
-    border-color:#d4e2f8;
-}
-
-.service-icon{
-    width:48px;
-    height:48px;
-    background:#eaf2ff;
-    color:#146ef5;
-    border-radius:11px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:21px;
-    margin-bottom:19px;
-}
-
-.service-card h3{
-    font-size:17px;
-    margin-bottom:8px;
-}
-
-.service-card p{
-    color:#707b89;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.service-card a{
-    color:#146ef5;
-    font-size:13px;
-    font-weight:700;
-}
-
-.contact{
-    background:#f5f7fa;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.contact-card{
-    background:#fff;
-    border:1px solid #e6ebf1;
-    border-radius:14px;
-    padding:28px;
-    text-align:center;
-}
-
-.contact-icon{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:#eaf2ff;
-    color:#146ef5;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 17px;
-    font-size:22px;
-}
-
-.contact-card h3{
-    font-size:17px;
-    margin-bottom:7px;
-}
-
-.contact-card p{
-    font-size:13px;
-    color:#717c8b;
-    margin-bottom:18px;
-}
-
-.contact-card a{
-    display:inline-block;
-    color:#146ef5;
-    font-size:13px;
-    font-weight:700;
-}
-
-.faq{
-    background:#fff;
-}
-
-.faq-list{
-    max-width:850px;
-    margin:auto;
-}
-
-details{
-    border-bottom:1px solid #e5e9ee;
-    padding:20px 0;
-}
-
-summary{
-    cursor:pointer;
-    list-style:none;
-    font-weight:700;
-    font-size:15px;
-    position:relative;
-    padding-right:30px;
-}
-
-summary::-webkit-details-marker{
-    display:none;
-}
-
-summary:after{
-    content:"+";
-    position:absolute;
-    right:0;
-    top:-4px;
-    font-size:23px;
-    color:#146ef5;
-    font-weight:400;
-}
-
-details[open] summary:after{
-    content:"−";
-}
-
-details p{
-    color:#707b89;
-    font-size:14px;
-    margin-top:12px;
-    padding-right:30px;
-}
-
-.cta{
-    padding:75px 24px;
-    background:#146ef5;
-    color:#fff;
-}
-
-.cta-container{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-.cta h2{
-    font-size:35px;
-    margin-bottom:12px;
-}
-
-.cta p{
-    opacity:.9;
-    max-width:650px;
-    margin:0 auto 25px;
-    font-size:15px;
-}
-
-.cta .btn-primary{
-    background:#fff;
-    color:#146ef5;
-    box-shadow:none;
-}
-
-footer{
-    background:#111a29;
-    color:#fff;
-    padding:50px 24px 25px;
-}
-
-.footer-grid{
-    max-width:1180px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:45px;
-    padding-bottom:40px;
-}
-
-.footer-brand p{
-    color:#aeb8c7;
-    font-size:13px;
-    max-width:340px;
-    margin-top:15px;
-}
-
-.footer-column h4{
-    font-size:14px;
-    margin-bottom:17px;
-}
-
-.footer-column a{
-    display:block;
-    color:#aeb8c7;
-    font-size:13px;
-    margin-bottom:10px;
-}
-
-.footer-column a:hover{
-    color:#fff;
-}
-
-.footer-bottom{
-    max-width:1180px;
-    margin:auto;
-    border-top:1px solid #283244;
-    padding-top:22px;
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    color:#8f9aaa;
-    font-size:12px;
-}
-
-.whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25D366;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-    box-shadow:0 8px 25px rgba(0,0,0,.20);
-    z-index:2000;
-    transition:.2s;
-}
-
-.whatsapp:hover{
-    transform:scale(1.07);
-}
-
-@media(max-width:900px){
-
-    .hero-container{
-        grid-template-columns:1fr;
-        gap:40px;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .service-grid,
-    .contact-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:650px){
-
-    .navbar{
-        min-height:68px;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero{
-        padding:60px 20px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    section{
-        padding:60px 20px;
-    }
-
-    .section-header h2{
-        font-size:28px;
-    }
-
-    .service-grid,
-    .contact-grid,
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-bottom{
-        flex-direction:column;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .btn-primary,
-    .btn-secondary{
-        width:100%;
-    }
-
-    .whatsapp{
-        width:54px;
-        height:54px;
-        right:17px;
-        bottom:17px;
-    }
-}
+  :root{
+    --bg:#f5fcf7; --fg:#020618; --card:#ffffff; --primary:#007e46; --primary-fg:#fcfcfc;
+    --secondary:#f1f5f9; --muted:#62748e; --accent:#daf7e3; --accent-fg:#00572e;
+    --warn:#fff2bd; --warn-fg:#6f4100; --border:#e2e8f0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--fg);font-family:system-ui,Arial,sans-serif;line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:672px;margin:0 auto;padding:24px 16px}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,252,247,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  .bar{max-width:1152px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:16px 20px}
+  .logo{font-weight:700;color:var(--primary)}
+  .logo span{color:var(--fg)}
+  nav{display:flex;gap:20px;font-size:14px;font-weight:500;color:rgba(2,6,24,.8)}
+  nav a:hover{color:var(--primary)}
+  nav a.on{color:var(--primary)}
+  main{padding-bottom:80px}
+  .page{display:none}
+  .page.on{display:block}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:0 1px 2px rgba(0,0,0,.05);margin-bottom:20px}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-fg);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+  h1{font-size:36px;line-height:1.15;margin-top:16px}
+  h1 em{color:var(--primary);font-style:normal}
+  h2{font-size:24px;font-weight:700}
+  h3{font-size:24px;font-weight:700;margin-bottom:12px}
+  .lead{margin-top:12px;font-size:18px;color:var(--muted)}
+  .btn{display:block;background:var(--primary);color:var(--primary-fg);border-radius:12px;padding:16px;text-align:center;font-size:18px;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.15);margin-top:20px}
+  .btn:hover{filter:brightness(1.07)}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;font-size:14px;font-weight:600}
+  .duo div{border:1px solid var(--border);border-radius:12px;padding:12px}
+  .warnbox{background:var(--warn);color:var(--warn-fg);border:1px solid var(--border);border-radius:16px;padding:20px;font-size:14px;margin-bottom:20px}
+  .warnbox b.t{font-size:18px;display:block}
+  .item{display:flex;align-items:center;gap:16px;border:1px solid var(--border);border-radius:12px;padding:16px;margin-top:12px}
+  .item:hover{background:var(--accent)}
+  .ico{flex:none;width:44px;height:44px;border-radius:999px;background:var(--accent);color:var(--accent-fg);display:flex;align-items:center;justify-content:center;font-weight:700}
+  .item .txt{flex:1}
+  .item .txt b{display:block}
+  .item .txt small{font-size:14px;color:var(--muted)}
+  .arrow{font-size:24px;color:var(--primary)}
+  ul{list-style:none;margin-top:16px;font-size:14px;font-weight:600}
+  ul li{margin-top:4px}
+  details{border:1px solid var(--border);border-radius:12px;padding:16px;margin-top:12px}
+  summary{cursor:pointer;font-weight:600}
+  details p{margin-top:8px;font-size:14px;color:var(--muted)}
+  .fixed{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;background:var(--primary);color:var(--primary-fg);border-radius:12px;padding:16px;text-align:center;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+  footer{border-top:1px solid var(--border);background:var(--secondary);padding-bottom:80px}
+  .fgrid{max-width:1152px;margin:0 auto;display:grid;gap:24px;padding:40px 20px;font-size:14px;color:var(--muted)}
+  .fgrid b{color:var(--fg);display:block;margin-bottom:8px}
+  .fgrid ul{margin-top:0;font-weight:400}
+  .copy{border-top:1px solid var(--border);padding:20px;text-align:center;font-size:12px;color:var(--muted)}
+  .legal p{font-size:14px;margin-top:12px}
+  @media(min-width:768px){h1{font-size:48px}.fgrid{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
-
 <body>
 
 <header>
-<nav class="navbar">
-
-<a href="#inicio" class="logo">
-    <div class="logo-icon">✓</div>
-    Central de Atendimento
-</a>
-
-<div class="nav-links">
-    <a href="#inicio">Início</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-    <a href="#faq">Dúvidas</a>
-    <a href="#contato" class="nav-button">Falar com atendente</a>
-</div>
-
-</nav>
+  <div class="bar">
+    <a class="logo" href="#home">ATENDIMENTO <span>AO CLIENTE</span></a>
+    <nav id="nav">
+      <a href="#home">Início</a>
+      <a href="#privacidade">Privacidade</a>
+      <a href="#termos">Termos</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 
-<section class="hero" id="inicio">
-<div class="hero-container">
+  <!-- ===== PÁGINA: INÍCIO ===== -->
+  <section class="page" id="home">
+    <div class="wrap">
 
-<div>
+      <section class="card">
+        <span class="pill">● Atendimento pelo WhatsApp</span>
+        <h1>Estamos aqui para <em>ajudar você</em></h1>
+        <p class="lead">Escolha o assunto e toque no botão. É simples: você será direcionado para conversar pelo WhatsApp.</p>
+        <a class="btn" href="https://wa.me/5511915608966?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+        <div class="duo">
+          <div>🔒<br>Proteção e cuidado</div>
+          <div>⚖️<br>Feito para facilitar</div>
+        </div>
+      </section>
 
-<div class="badge">
-    <span></span>
-    Atendimento disponível
-</div>
+      <section class="warnbox">
+        <b class="t">⚠️ CUIDADO COM GOLPES</b>
+        <p><b>Nunca envie senhas, códigos de verificação ou dados do cartão.</b> Use somente o número de WhatsApp mostrado nesta página.</p>
+      </section>
 
-<h1>
-    Precisa de ajuda?<br>
-    <strong>Estamos aqui para atender.</strong>
-</h1>
+      <section class="card">
+        <h2>Como podemos ajudar?</h2>
 
-<p>
-    Encontre informações, consulte opções de atendimento
-    e fale com nossa equipe de forma rápida e prática.
-</p>
+        <a class="item" href="https://wa.me/5511915608966?text=Ol%C3%A1!%20Preciso%20da%20segunda%20via%20do%20meu%20boleto." target="_blank" rel="noopener">
+          <span class="ico">R$</span>
+          <span class="txt"><b>Segunda via de boleto</b><small>Preciso do meu boleto para pagamento</small></span>
+          <span class="arrow">›</span>
+        </a>
 
-<div class="hero-buttons">
-    <a href="#contato" class="btn-primary">Falar com atendente</a>
-    <a href="#servicos" class="btn-secondary">Ver opções de atendimento</a>
-</div>
+        <a class="item" href="https://wa.me/5511915608966?text=Ol%C3%A1!%20Quero%20agendar%20um%20atendimento%20com%20o%20doutor." target="_blank" rel="noopener">
+          <span class="ico">📅</span>
+          <span class="txt"><b>Agendamentos</b><small>Agende um atendimento com o doutor</small></span>
+          <span class="arrow">›</span>
+        </a>
 
-</div>
+        <a class="item" href="https://wa.me/5511915608966?text=Ol%C3%A1!%20Quero%20exame%20e%20an%C3%A1lise%2C%20consulta%20presencial." target="_blank" rel="noopener">
+          <span class="ico">$</span>
+          <span class="txt"><b>Exame e Consulta</b><small>Exame e análise, consulta presencial</small></span>
+          <span class="arrow">›</span>
+        </a>
 
-<div class="hero-card">
+        <a class="item" href="https://wa.me/5511915608966?text=Ol%C3%A1!%20Tenho%20d%C3%BAvidas%20e%20quero%20falar%20com%20um%20atendente." target="_blank" rel="noopener">
+          <span class="ico">?</span>
+          <span class="txt"><b>Dúvidas</b><small>Falar com atendente</small></span>
+          <span class="arrow">›</span>
+        </a>
 
-<div class="status">
-    <span class="status-dot"></span>
-    Atendimento online
-</div>
+        <a class="item" href="https://wa.me/5511915608966?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20de%20atendimento." target="_blank" rel="noopener">
+          <span class="ico">☏</span>
+          <span class="txt"><b>Outros assuntos</b><small>Fale com o atendimento</small></span>
+          <span class="arrow">›</span>
+        </a>
+      </section>
 
-<h3>Como podemos ajudar?</h3>
+      <section class="card">
+        <h2>🛡️ Segurança em primeiro lugar</h2>
+        <p style="margin-top:8px;color:var(--muted)">Use esta página apenas para iniciar o atendimento. Nunca compartilhe códigos ou senhas.</p>
+        <a class="btn" href="https://wa.me/5511915608966?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">💬 Iniciar atendimento</a>
+        <ul>
+          <li>✓ Confirme o número antes de conversar</li>
+          <li>✓ Não clique em links enviados por desconhecidos</li>
+          <li>✓ Na dúvida, volte para esta página</li>
+        </ul>
+      </section>
 
-<p>
-    Selecione uma das opções abaixo para encontrar
-    o canal de atendimento adequado.
-</p>
+      <section class="card">
+        <h2>Dúvidas frequentes</h2>
+        <details>
+          <summary>Como começo o atendimento?</summary>
+          <p>Toque em qualquer botão verde “Falar no WhatsApp”. O aplicativo abre com uma mensagem pronta.</p>
+        </details>
+        <details>
+          <summary>Preciso saber escrever a mensagem?</summary>
+          <p>Não. O botão já prepara a mensagem.</p>
+        </details>
+        <details>
+          <summary>Como sei que estou no canal correto?</summary>
+          <p>Confira o número exibido nesta página: (11) 91560-8966.</p>
+        </details>
+        <a class="btn" href="https://wa.me/5511915608966?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+      </section>
 
-<a href="#contato" class="card-option">
-    <div class="card-icon">💬</div>
-    <div>
-        <strong>Atendimento</strong>
-        <span>Fale com nossa equipe</span>
     </div>
-</a>
+  </section>
 
-<a href="#servicos" class="card-option">
-    <div class="card-icon">📋</div>
-    <div>
-        <strong>Solicitações</strong>
-        <span>Consulte nossas opções</span>
+  <!-- ===== PÁGINA: POLÍTICA DE PRIVACIDADE ===== -->
+  <section class="page" id="privacidade">
+    <div class="wrap legal">
+      <h3>Política de Privacidade</h3>
+      <p>A SOUZA &amp; SOUZA ADVOCACIA respeita sua privacidade e trata dados pessoais conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+      <p>Os dados eventualmente fornecidos são usados apenas para contato e prestação de serviços, não sendo compartilhados com terceiros sem autorização, salvo obrigação legal.</p>
+      <p>Você pode solicitar acesso, correção ou exclusão de seus dados a qualquer momento por meio de nossos canais de atendimento.</p>
+      <p>Esta política pode ser atualizada periodicamente.</p>
+      <a class="btn" href="#home">← Voltar ao início</a>
     </div>
-</a>
+  </section>
 
-<a href="#faq" class="card-option">
-    <div class="card-icon">❓</div>
-    <div>
-        <strong>Central de dúvidas</strong>
-        <span>Veja perguntas frequentes</span>
+  <!-- ===== PÁGINA: TERMOS DE USO ===== -->
+  <section class="page" id="termos">
+    <div class="wrap legal">
+      <h3>Termos de Uso</h3>
+      <p>Ao acessar este site, você concorda com estes termos.</p>
+      <p>O conteúdo tem caráter exclusivamente informativo e não constitui consultoria jurídica.</p>
+      <p>É proibida a reprodução do conteúdo sem autorização prévia da SOUZA &amp; SOUZA ADVOCACIA.</p>
+      <p>Estes termos podem ser alterados a qualquer momento, sem aviso prévio.</p>
+      <a class="btn" href="#home">← Voltar ao início</a>
     </div>
-</a>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="services" id="servicos">
-
-<div class="container">
-
-<div class="section-header">
-    <span>Atendimento</span>
-    <h2>Encontre o que você precisa</h2>
-    <p>
-        Acesse rapidamente as principais opções
-        disponíveis em nossa central de atendimento.
-    </p>
-</div>
-
-<div class="service-grid">
-
-<div class="service-card">
-    <div class="service-icon">💬</div>
-    <h3>Falar com atendente</h3>
-    <p>
-        Entre em contato com nossa equipe para
-        receber orientações e informações.
-    </p>
-    <a href="#contato">Solicitar atendimento →</a>
-</div>
-
-<div class="service-card">
-    <div class="service-icon">📄</div>
-    <h3>Solicitações</h3>
-    <p>
-        Consulte informações sobre solicitações,
-        serviços e procedimentos.
-    </p>
-    <a href="#contato">Consultar →</a>
-</div>
-
-<div class="service-card">
-    <div class="service-icon">🔎</div>
-    <h3>Informações</h3>
-    <p>
-        Encontre informações gerais e orientações
-        para sua necessidade.
-    </p>
-    <a href="#faq">Ver informações →</a>
-</div>
-
-<div class="service-card">
-    <div class="service-icon">📞</div>
-    <h3>Suporte</h3>
-    <p>
-        Precisa de suporte? Nossa equipe está
-        disponível para ajudar.
-    </p>
-    <a href="#contato">Buscar suporte →</a>
-</div>
-
-<div class="service-card">
-    <div class="service-icon">🕐</div>
-    <h3>Horários</h3>
-    <p>
-        Consulte os canais disponíveis e os horários
-        de atendimento.
-    </p>
-    <a href="#contato">Ver canais →</a>
-</div>
-
-<div class="service-card">
-    <div class="service-icon">📱</div>
-    <h3>Atendimento digital</h3>
-    <p>
-        Escolha uma opção digital para entrar
-        em contato com nossa equipe.
-    </p>
-    <a href="#contato">Entrar em contato →</a>
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="contact" id="contato">
-
-<div class="container">
-
-<div class="section-header">
-    <span>Canais</span>
-    <h2>Fale com nossa equipe</h2>
-    <p>
-        Escolha o canal de atendimento que deseja utilizar.
-    </p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-    <div class="contact-icon">💬</div>
-    <h3>WhatsApp</h3>
-    <p>
-        Atendimento rápido através do WhatsApp.
-    </p>
-    <a href="https://wa.me/5500000000000" target="_blank">
-        Iniciar atendimento →
-    </a>
-</div>
-
-<div class="contact-card">
-    <div class="contact-icon">📞</div>
-    <h3>Telefone</h3>
-    <p>
-        Entre em contato através de nossa central.
-    </p>
-    <a href="tel:+5500000000000">
-        Ligar agora →
-    </a>
-</div>
-
-<div class="contact-card">
-    <div class="contact-icon">✉️</div>
-    <h3>E-mail</h3>
-    <p>
-        Envie sua solicitação por e-mail.
-    </p>
-    <a href="mailto:atendimento@exemplo.com">
-        Enviar mensagem →
-    </a>
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="faq" id="faq">
-
-<div class="container">
-
-<div class="section-header">
-    <span>FAQ</span>
-    <h2>Perguntas frequentes</h2>
-    <p>
-        Confira algumas dúvidas comuns sobre nosso atendimento.
-    </p>
-</div>
-
-<div class="faq-list">
-
-<details>
-    <summary>Como posso falar com um atendente?</summary>
-    <p>
-        Você pode utilizar um dos canais de atendimento
-        disponíveis nesta página e escolher a opção mais adequada.
-    </p>
-</details>
-
-<details>
-    <summary>Quais canais de atendimento estão disponíveis?</summary>
-    <p>
-        Os canais disponíveis estão apresentados na seção
-        de contato desta página.
-    </p>
-</details>
-
-<details>
-    <summary>Como faço uma solicitação?</summary>
-    <p>
-        Para realizar uma solicitação, selecione a opção
-        de atendimento correspondente e siga as orientações fornecidas.
-    </p>
-</details>
-
-<details>
-    <summary>Posso solicitar suporte pelo WhatsApp?</summary>
-    <p>
-        Sim. Utilize o botão de WhatsApp disponível na página
-        para iniciar uma conversa com a equipe de atendimento.
-    </p>
-</details>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="cta">
-
-<div class="cta-container">
-
-<h2>Precisa de atendimento?</h2>
-
-<p>
-    Nossa equipe está pronta para receber sua solicitação
-    e orientar você através dos canais disponíveis.
-</p>
-
-<a href="#contato" class="btn-primary">
-    Falar com atendente
-</a>
-
-</div>
-
-</section>
+  </section>
 
 </main>
 
+<a class="fixed" href="https://wa.me/5511915608966" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
 
 <footer>
-
-<div class="footer-grid">
-
-<div class="footer-brand">
-
-<div class="logo">
-    <div class="logo-icon">✓</div>
-    Central de Atendimento
-</div>
-
-<p>
-    Canal informativo destinado a facilitar o acesso
-    aos serviços e canais de atendimento.
-</p>
-
-</div>
-
-<div class="footer-column">
-
-<h4>Atendimento</h4>
-
-<a href="#servicos">Serviços</a>
-<a href="#contato">Canais de contato</a>
-<a href="#faq">Perguntas frequentes</a>
-
-</div>
-
-<div class="footer-column">
-
-<h4>Institucional</h4>
-
-<a href="#">Sobre nós</a>
-<a href="#">Política de Privacidade</a>
-<a href="#">Termos de Uso</a>
-
-</div>
-
-<div class="footer-column">
-
-<h4>Contato</h4>
-
-<a href="#contato">WhatsApp</a>
-<a href="#contato">Telefone</a>
-<a href="#contato">E-mail</a>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-<span>©️ 2026 Central de Atendimento. Todos os direitos reservados.</span>
-
-<span>Atendimento e informações</span>
-
-</div>
-
+  <div class="fgrid">
+    <div><b>SOUZA &amp; SOUZA ADVOCACIA</b>Negociações conduzidas com respeito, transparência e agilidade.</div>
+    <div><b>Navegação</b>
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#privacidade">Política de Privacidade</a></li>
+        <li><a href="#termos">Termos de Uso</a></li>
+      </ul>
+    </div>
+    <div><b>Dados da empresa</b>CNPJ 34.738.809/0001-37<br>Av. Senador Lemos, 443, Sala 701, Umarizal, Belém/PA — CEP 66050-000</div>
+  </div>
+  <p class="copy">© 2026 Souza &amp; Souza Advocacia. Todos os direitos reservados.</p>
 </footer>
 
-
-<a
-href="https://wa.me/5500000000000"
-target="_blank"
-class="whatsapp"
-aria-label="Falar pelo WhatsApp"
->
-💬
-</a>
+<script>
+  function show(){
+    var id = (location.hash || '#home').replace('#','');
+    var pages = document.querySelectorAll('.page');
+    var ok = false;
+    for (var i = 0; i < pages.length; i++) {
+      var on = pages[i].id === id;
+      pages[i].className = 'page' + (on ? ' on' : '');
+      if (on) ok = true;
+    }
+    if (!ok) {
+      document.getElementById('home').className = 'page on';
+      id = 'home';
+    }
+    var links = document.querySelectorAll('#nav a');
+    for (var j = 0; j < links.length; j++) {
+      links[j].className = links[j].getAttribute('href') === '#' + id ? 'on' : '';
+    }
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+</script>
 
 </body>
 </html>
